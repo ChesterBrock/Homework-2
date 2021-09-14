@@ -1,17 +1,16 @@
-﻿/// Chapter No. 1		Exercise No. 1
-/// File Name: MyFirstProgram.java
+﻿/// Chapter No.2 		Exercise No. 2
+/// File Name: Program.cs
 /// @author: Chester Brock 
-/// Date:  August 24, 2021
+/// Date:  Sep 13, 2021
 ///
-/// Problem Statement: Ask the user to enter two numbers, calculate the sum of
-/// these two numbers, and display the sum to the screen
+/// Problem Statement:  Write a program that converts degrees Fahrenheit to Celsius
 /// 
 /// 
 /// Overall Plan:
-/// 1) Print an initial welcoming message to the screen
-/// 2) Prompt the user for two integers
-/// 3) Calculate the sum of the integers
-/// 4) Print the sum of the integers to the screen
+/// 1) using formula degreesC = 5(degreesF – 32)/9, convert farhrenheit  to celsius
+/// 2) Prompt the user to enter a temperature in degrees Fahrenheit 
+/// 3) let the program print out the equivalent Celsius temperature
+/// 4) fractional part to one decimal point
 ///
 
 using System;
@@ -26,6 +25,21 @@ namespace Part2
     {
         static void Main(string[] args)
         {
+            double fahren, celsius;
+
+            // prompt user to enter fahrenheit
+            Console.WriteLine("Enter a temperature in degrees Fahrenheit (just a whole number of degrees without a fractional part): ");
+            // Read in the users number 
+            fahren = Int32.Parse(Console.ReadLine());
+
+            // creating the conversion 
+            celsius = 5 * (fahren - 32) / 9;
+
+            // display to only one decimal 
+            Console.WriteLine(fahren + " degrees Fahrenheit = " + Math.Round(celsius, 1) + " degrees Celsius");
+
+            // for pausing the screen 
+            Console.ReadLine();
         }
     }
 }
